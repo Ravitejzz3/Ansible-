@@ -1,0 +1,19 @@
+- name: Demo on conditions
+  hosts: all
+  vars:
+    actions: true
+  tasks:
+    - name: Run this task for CentOs Machines
+      debug:
+        msg: Hello To CentOs
+      when: ansible_distribution == "CentOS"
+
+    - name: Run this task only Ubuntu Machines
+      debug:
+        msg: Hello To CentOs
+      when: ansible_distribution == "Ubuntu"
+
+    - name: Run ABC actions
+      debug:
+        msg: Running ABC action
+      when: action   
