@@ -1,0 +1,5 @@
+[PROD]
+rating-prod.roboshop.internal
+
+[DEV]
+upi-dev.roboshop.internal
