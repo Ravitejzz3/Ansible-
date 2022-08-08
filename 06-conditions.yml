@@ -13,7 +13,7 @@
         msg: Hello To CentOs
       when: ansible_distribution == "Ubuntu"
 
-    - name: Run ABC action
+    - name: Run ABC Action
       debug:
-        msg: Running ABC action
+        msg: Running ABC Action
       when: action   
