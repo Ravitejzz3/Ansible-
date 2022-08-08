@@ -8,14 +8,14 @@
 - name: Play2
   hosts: all
   tasks: 
-    - name: Print Namastey from Play1
+    - name: Print Namastey from Play2
       ansible.builtin.debug:
-        msg: Namastey from task1 of play1
+        msg: Namastey from task1 of play2
 
 - name: Play3
   hosts: all
   tasks: 
-    - name: Print Avengers from Play1
+    - name: Print Avengers from Play3
       ansible.builtin.debug:
-        msg: Avengers from task1 of play1
+        msg: Avengers from task1 of play3
 
