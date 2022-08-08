@@ -2,6 +2,9 @@
   hosts: all
   vars:
     URL: play.insta.com
+  vars_prompt:
+    - name: URL
+      prompt: Enter URL 
   tasks: 
     - name: Print URL
       ansible.builtin.debug:
