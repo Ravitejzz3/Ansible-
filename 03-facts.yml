@@ -4,3 +4,7 @@
     - name: Printing a fact
       ansible.builtin.debug:
         msg: "{{ ansible_distribution }}"
+
+    - name: Printing a macaddress
+      ansible.builtin.debug:
+        msg: "{{ ansible_default_ip4.macaddress }}"    
