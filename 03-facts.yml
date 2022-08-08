@@ -5,7 +5,7 @@
       ansible.builtin.debug:    
         msg: "{{ ansible_distribution }}"
 
-    - name: Printing a mac address
+    - name: Printing the mac address
       ansible.builtin.debug:    
         msg: "{{ ansible_default_ip4.macaddress }}"
 
