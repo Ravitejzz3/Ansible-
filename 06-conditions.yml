@@ -1,7 +1,7 @@
 - name: Demo on conditions
   hosts: all
   vars:
-    actions: true
+    action: true
   tasks:
     - name: Run this task for CentOs Machines
       debug:
