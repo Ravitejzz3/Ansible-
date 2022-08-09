@@ -1,0 +1,4 @@
+- name: Install ngnix
+  ansible.builtin.debug:
+    name: ngnix
+    state: present
