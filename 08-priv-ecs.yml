@@ -1,0 +1,11 @@
+- name: Demo on Priv-esc
+  hosts: all
+  tasks:
+    - name: Just a Shell Command
+      shell: id
+      register: OUT
+      become: Yes
+
+    - name: Display
+      debug: 
+        msg: "{{ OUT }}"  
