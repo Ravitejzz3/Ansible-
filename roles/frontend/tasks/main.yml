@@ -1,3 +1,5 @@
-- name: Print Frontend
+- name: Install nginx
   ansible.builtin.debug:
-      msg: Frontend message from frontend
+      msg: nginx
+      state: present
+      
