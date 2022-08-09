@@ -2,7 +2,7 @@
   hosts: all
   vars:
   tasks:
-    - name: copy a proxy file to remote nodes
+    - name: copy a proxyy file to remote nodes
       ansible.builtin.template:
-        src: proxy.conf
+        src: proxyy.conf
         dest: /home/centos
