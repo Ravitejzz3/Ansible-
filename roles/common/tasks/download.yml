@@ -1,4 +1,4 @@
-- name: Download and extracting "{{COMPONENT}}"
+- name: Download and extracting {{COMPONENT}}
   ansible.builtin.include_role:
     src: "{{REPO_URL}}"
     dest: /tmp

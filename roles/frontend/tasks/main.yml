@@ -3,10 +3,10 @@
       name: nginx
       state: present
 
-- name: Download and extracting "{{COMPONENT}}"
+- name: Download and extracting {{COMPONENT}}
   ansible.builtin.include_role:
     name: common
-    task_from: download
+    tasks_from: download
 
 - name: Cleanup of Old HTML Content
   ansible.builtin.file: 
