@@ -1,6 +1,6 @@
 - name: Playbook to setup the roboshop project
-  hosts: "{{ COMPONENT }}"
+  hosts: mongodb
   become: yes
   roles:
-      - "{{ COMPONENT }}"
+      - mongodb
   
