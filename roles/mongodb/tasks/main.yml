@@ -21,4 +21,4 @@
     enabled: yes    
         
 - name: Disabling auto shutdown
-  shell: disable-autoshutdown && set-hostname mongodb        
+  shell: disable-auto-shutdown && set-hostname mongodb        
