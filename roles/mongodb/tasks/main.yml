@@ -34,6 +34,8 @@
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/users.js"
     idempotent: yes         
-        
-- name: Disabling auto shutdown
-  shell: disable-auto-shutdown && set-hostname "{{ COMPONENT }}"      
+
+- name: Set-hostname
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: set-hostname             
