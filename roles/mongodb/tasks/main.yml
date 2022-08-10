@@ -18,7 +18,23 @@
   ansible.builtin.service:
     name: mongod
     state: started
-    enabled: yes    
+    enabled: yes
+
+- name: Download and extracting the {{ COMPONENT }} repo
+  ansible.builtin.unarchive:
+    src: "{{REPO_URL}}"
+    dest: /tmp
+    remote_src: yes
+
+- name: Loading Catalogue Scahme
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/catalogue.js"
+    idempotent: yes     
+
+- name: Loading Catalogue Scahme
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes         
         
 - name: Disabling auto shutdown
-  shell: disable-auto-shutdown && set-hostname mongodb        
+  shell: disable-auto-shutdown && set-hostname {{ COMPONENT }}        
