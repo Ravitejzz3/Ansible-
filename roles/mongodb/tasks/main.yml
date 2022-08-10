@@ -20,7 +20,7 @@
     state: started
     enabled: yes
 
-- name: Download and extracting {{COMPONENT}}
+- name: Download and extracting "{{COMPONENT}}"
   ansible.builtin.include_role:
     name: common
     task_from: download
