@@ -3,11 +3,10 @@
       name: nginx
       state: present
 
-- name: Download and extract
-  ansible.builtin.unarchive:
-    src: "{{REPO_URL}}"
-    dest: /tmp
-    remote_src: yes
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    task_from: download
 
 - name: Cleanup of Old HTML Content
   ansible.builtin.file: 
