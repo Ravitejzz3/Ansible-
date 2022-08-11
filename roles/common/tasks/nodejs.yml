@@ -8,15 +8,10 @@
       - gcc-c++
     state: present
 
-- name: Creating Appuser account {{APPUSER}}
+- name: Cleanup of {{COMPONENT}} and sorting the permission
   ansible.builtin.include_role:
     name: common
-    tasks_from: create-user         
-
-- name: Download and extracting {{COMPONENT}}
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: download         
+    tasks_from: cleanup           
 
 - name: Install packages based on package.json.
   community.general.npm:
