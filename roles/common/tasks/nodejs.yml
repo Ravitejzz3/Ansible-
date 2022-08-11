@@ -8,6 +8,16 @@
       - gcc-c++
     state: present
 
+- name: App user {{APPUSER}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: cleanup
+
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download    
+
 - name: Cleanup of {{COMPONENT}} and sorting the permission
   ansible.builtin.include_role:
     name: common
@@ -25,4 +35,6 @@
 - name: Set-hostname
   ansible.builtin.include_role:
     name: common
-    tasks_from: set-hostname          
+    tasks_from: set-hostname   
+
+       
