@@ -19,5 +19,5 @@
     tasks_from: download         
 
 - name: Install packages based on package.json.
-  comunity.general.npm:
+  community.general.npm:
     path: /home/{{APPUSER}}//{{COMPONENT}}     
