@@ -20,4 +20,14 @@
 
 - name: Install packages based on package.json.
   community.general.npm:
-    path: /home/{{APPUSER}}//{{COMPONENT}}     
+    path: /home/{{APPUSER}}//{{COMPONENT}} 
+
+- name: Configuring and starting {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: systemd 
+
+- name: Set-hostname
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: set-hostname          
