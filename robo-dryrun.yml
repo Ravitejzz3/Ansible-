@@ -10,7 +10,7 @@
   vars:
     instance_type: "t3.micro"
     security_group_id: "sg-0f608a0759dd32284"  # Update as per your security group id
-    image: "ami-0aa718de62aea6fbe"             # Update as per your ami-id id, ensure this ami has ANSIBLE installed ( as it runs ansible-pull)
+    image: "ami-01637290031deefcc"             # Update as per your ami-id id, ensure this ami has ANSIBLE installed ( as it runs ansible-pull)
     region: "us-east-1"
   tasks:
     - name: Launch instance                    # Creates ec2 instance 
