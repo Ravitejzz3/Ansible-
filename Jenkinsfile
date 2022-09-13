@@ -5,7 +5,7 @@ pipeline {
           choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
     }
     environment { 
-        SSH_CRED = credentials('SSH-Cenos7')
+        SSH_CRED = credentials('SSH-Centos7')
     }
     stages {
         stage('Do a dry-run') {
