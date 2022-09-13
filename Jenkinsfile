@@ -1,8 +1,9 @@
 pipeline {
     agent any
     parameters {
-          string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
-          choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
+        choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
+        string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
+          
     }
     environment { 
         SSH_CRED = credentials('SSH-Centos7')
