@@ -1,12 +1,11 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
-        string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
-          
+         choice(name: 'ENV', choices: ['dev', 'prod'], description: 'Chose the environment')
+         string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
     }
     environment { 
-        SSH_CRED = credentials('SSH-Centos7')
+        SSH_CRED = credentials('SSH-Cenos7')
     }
     stages {
         stage('Do a dry-run') {
