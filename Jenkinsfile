@@ -5,7 +5,7 @@ pipeline {
          string(name: 'COMPONENT', defaultValue: 'mongodb', description: 'Enter the name of the component')
     }
     environment { 
-        SSH_CRED = credentials('SSH-Cenos7')
+        SSH_CRED = credentials('SSH-CENTOS7')
     }
     stages {
         stage('Do a dry-run') {
