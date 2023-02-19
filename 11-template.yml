@@ -1,9 +1,0 @@
-- name: Demo on copying the file to the remote Machines with a template
-  hosts: all
-  vars:
-    name: play.google.com
-  tasks:
-    - name: copy a proxyy file to remote nodes
-      ansible.builtin.template:
-        src: proxyy.conf
-        dest: /home/centos
